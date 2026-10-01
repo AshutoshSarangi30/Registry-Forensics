@@ -1,4 +1,5 @@
 ## Registry Forensics - Day 01 (part-02)
+###### By - Ashutosh Sarangi
 
 1. **Aim**: To locate and retrieve a deleted file using LNK Analysis, FTK Imager and Autopsy.
 
