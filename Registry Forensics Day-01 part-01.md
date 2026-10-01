@@ -1,4 +1,5 @@
 ## Registry Forensics - Day 01 (part-01)
+###### By - Ashutosh Sarangi
 
 1. **Aim**: To understand the different hives in the Registry and find a file whose location has changed using the USRClass.dat hive ShellBags and Jump Lists.
 
