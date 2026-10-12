@@ -85,7 +85,7 @@ f. Enter JLECmd.exe. As discussed before Jump Lists will have it noted down if y
 g. Run the following command in cmd (note - open the cmd in the folder where you have the JLECmd.exe) and it will export the full record of the Jump Lists recorded in your system. Note that your decoded ShellBags show the folders you explored and Jump Lists go inside those folders and tell you which files were accessed.
 
 <div align="center">
-<b>JLECmd.exe -d “C:\Users\{YourUsername}\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations” --csv “C:\Users\{YourUsername}\Desktop”</b>
+<b>`JLECmd.exe -d “C:\Users\{YourUsername}\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations” --csv “C:\Users\{YourUsername}\Desktop”`</b>
 </div>
                 
                 
