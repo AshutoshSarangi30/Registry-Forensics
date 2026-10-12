@@ -34,8 +34,12 @@ c. **LNK Files** - This covers up the loophole left by Jump Lists. Every time a 
 4. **Activity**: Now our target today is to locate a file which was stored in C drive long ago but its current location is not known.
 
 a. Open Registry Editor and go to USRCLASS.dat hive using:
+                                                                   
 
-                                                                    `Computer\HKEY_USERS\<SID>`
+```text
+Computer\HKEY_USERS\<SID>
+```
+
                                                          
 <img src="https://github.com/user-attachments/assets/7a064595-d3c2-4d9d-9f96-9552fc77459c" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <br>
