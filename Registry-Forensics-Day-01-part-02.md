@@ -112,7 +112,7 @@ h. After opening the recovered file we see this error. Now go to ‘File’ and 
 <br>
 <div align="center">
 Attempting to recover the data of the target file
-</div>
+</div> 
 <br>
 
 i. This is a dead end. Our investigation ends here and the data could not be recovered.
