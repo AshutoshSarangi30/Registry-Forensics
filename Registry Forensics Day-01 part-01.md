@@ -48,7 +48,7 @@ b. Now visit the ShellBags using:
 
                         `Computer\HKEY_USERS\<SID>\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU`
 
-<img width="956" height="537" alt="image" src="https://github.com/user-attachments/assets/6fa82433-a78d-43fe-992e-9df42bf38506" />
+<img width="1000" height="537" alt="image" src="https://github.com/user-attachments/assets/6fa82433-a78d-43fe-992e-9df42bf38506" />
 
 <br>
 <div align="center">
@@ -61,7 +61,7 @@ c. We see a lot of files of ‘REG_BINARY' type with hexadecimal-coded data. Her
 
 d. Run a 'Load Active Registry' in ShellBags Explorer (note - run ShellBags Explorer as administrator). This will decode the ShellBags.
 
-<img width="1917" height="1022" alt="image" src="https://github.com/user-attachments/assets/b2b60221-a424-4ac9-8f3c-3c10dccbc13f" />
+<img width="2000" height="1022" alt="image" src="https://github.com/user-attachments/assets/b2b60221-a424-4ac9-8f3c-3c10dccbc13f" />
 <br>
 <div align="center">
 Successfully decoded the “gibberish”
