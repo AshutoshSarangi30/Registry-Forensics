@@ -1,4 +1,5 @@
 ## Registry Forensics - Day 01 (part-01)
+
 ###### By - Ashutosh Sarangi
 
 1. **Aim**: To understand the different hives in the Registry and find a file whose location has changed using the USRClass.dat hive ShellBags and Jump Lists.
@@ -7,17 +8,17 @@
 
 3. **Theory**: Registry contains all the information that Windows needs to function on a day-to-day basis. It has separate files containing the necessary information. The hives are as follows:
 
-a. SYSTEM (c:\Windows\System32\config\SYSTEM)
+  a. SYSTEM (c:\Windows\System32\config\SYSTEM)
 
-b. SECURITY (c:\Windows\System32\config\SECURITY)
+  b. SECURITY (c:\Windows\System32\config\SECURITY)
 
-c. SAM (c:\Windows\System32\config\SAM)
+  c. SAM (c:\Windows\System32\config\SAM)
 
-d. SOFTWARE (c:\Windows\System32\config\SOFTWARE)
+  d. SOFTWARE (c:\Windows\System32\config\SOFTWARE)
 
-e. NTUSER.DAT (c:\Users\username\NTUSER.DAT)
+  e. NTUSER.DAT (c:\Users\username\NTUSER.DAT)
 
-f. USRCLASS.DAT (C:\Users\username\AppData\Local\Microsoft\Windows\USRCLASS.DAT)
+  f. USRCLASS.DAT (C:\Users\username\AppData\Local\Microsoft\Windows\USRCLASS.DAT)
 
 In today's session we have focused on USRCLASS.DAT. USRCLASS.DAT (along with NTUSER.DAT - more on that later) is basically the whole database of your activity on your laptop/computer. USRCLASS.DAT focuses on your app data, folder layouts and background settings (for instance when you open a .mp3 file you set the 'Open With' preference as 'Windows Media Player'). It stores all the files and folders which you may have executed or accessed or viewed in recent history. However, it is not possible to store all the data right from the moment you start using it. Therefore Windows has a feature where you can view only the most recent "n" items. Another catch is that when you format your system, everything in your system is overwritten (in simple terms your OS forgets everything).
 
@@ -34,7 +35,7 @@ c. **LNK Files** - This covers up the loophole left by Jump Lists. Every time a 
 
 a. Open Registry Editor and go to USRCLASS.dat hive using:
 
-                                                         Computer\HKEY_USERS\<SID>
+                                                         `Computer\HKEY_USERS\<SID>`
                                                          
 <img width="922" height="522" alt="image" src="https://github.com/user-attachments/assets/bdb594d2-b6a2-4369-abff-c2e37bc843a2" />
 <br>
@@ -45,7 +46,7 @@ We are now in USRCLASS.dat hive
 
 b. Now visit the ShellBags using:
 
-                        Computer\HKEY_USERS\<SID>\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU
+                        `Computer\HKEY_USERS\<SID>\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU`
 
 <img width="956" height="537" alt="image" src="https://github.com/user-attachments/assets/6fa82433-a78d-43fe-992e-9df42bf38506" />
 
@@ -80,7 +81,7 @@ f. Enter JLECmd.exe. As discussed before Jump Lists will have it noted down if y
 
 g. Run the following command in cmd (note - open the cmd in the folder where you have the JLECmd.exe) and it will export the full record of the Jump Lists recorded in your system. Note that your decoded ShellBags show the folders you explored and Jump Lists go inside those folders and tell you which files were accessed.
 
-    JLECmd.exe -d “C:\Users\<YourUsername>\AppData\Roaming\Microsoft\Windows\Recent\AutomaticD estinations” --csv “C:\Users\<YourUsername>\Desktop”
+    `JLECmd.exe -d “C:\Users\<YourUsername>\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations” --csv “C:\Users\<YourUsername>\Desktop”`
 
 <img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/7fb23a65-a676-4524-a255-490cbb45c1d9" />
 <br>
@@ -111,7 +112,7 @@ This is the file we were looking for. On the right we entered the file location 
 
 6. **Easter Eggs**: a. You can get your Security ID (SID) by running the following command on cmd:
 
-                                                      whoami /user
+                                                      `whoami /user`
 
 b. Look at the circle in 3(e). We see a tick mark in the box. This is the ‘Has Explored’ section and it implies that the user visited that file/folder and EXPLICITLY made changes to it. Very crucial information as far as forensics is concerned.
 
