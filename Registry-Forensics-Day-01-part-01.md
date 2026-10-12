@@ -2,11 +2,11 @@
 
 ###### By - Ashutosh Sarangi
 
-1. **Aim**: To understand the different hives in the Registry and find a file whose location has changed using the USRClass.dat hive ShellBags and Jump Lists.
+1\. **Aim**: To understand the different hives in the Registry and find a file whose location has changed using the USRClass.dat hive ShellBags and Jump Lists.
 
-2. **Tools Used**: ShellBags Explorer, JLECmd.exe, Registry Editor, Microsoft Excel.
+2\. **Tools Used**: ShellBags Explorer, JLECmd.exe, Registry Editor, Microsoft Excel.
 
-3. **Theory**: Registry contains all the information that Windows needs to function on a day-to-day basis. It has separate files containing the necessary information. The hives are as follows:
+3\. **Theory**: Registry contains all the information that Windows needs to function on a day-to-day basis. It has separate files containing the necessary information. The hives are as follows:
 
   a. SYSTEM (c:\Windows\System32\config\SYSTEM)
 
@@ -31,7 +31,7 @@ We have used two primary features of Windows OS today - ShellBags and Jump Lists
   c. **LNK Files** - This covers up the loophole left by Jump Lists. Every time a file lands in your system, a "breadcrumb" is left and stored as an LNK file. This is crucial in situations where you have to recover data which is permanently deleted.
 
 
-4. **Activity**: Now our target today is to locate a file which was stored in C drive long ago but its current location is not known.
+4\. **Activity**: Now our target today is to locate a file which was stored in C drive long ago but its current location is not known.
 
   a. Open Registry Editor and go to USRCLASS.dat hive using:
                                                                    
@@ -114,9 +114,9 @@ This is the file we were looking for. On the right we entered the file location 
 </div>
 <br>
 
-5.**Conclusion**: In this session we found out how we go about finding a file which is "lost" somewhere in our system. But what if the file is deleted?
+5\. **Conclusion**: In this session we found out how we go about finding a file which is "lost" somewhere in our system. But what if the file is deleted?
 
-6. **Easter Eggs**: a. You can get your Security ID (SID) by running the following command on cmd:
+6\. **Easter Eggs**: a. You can get your Security ID (SID) by running the following command on cmd:
 
 ```dos
 whoami /user
@@ -124,4 +124,4 @@ whoami /user
 
 b. Look at the circle in 3(e). We see a tick mark in the box. This is the ‘Has Explored’ section and it implies that the user visited that file/folder and EXPLICITLY made changes to it. Very crucial information as far as forensics is concerned.
 
-7.**Next Session**: Using LNK to retrieve deleted data.
+7\. **Next Session**: Using LNK to retrieve deleted data.
