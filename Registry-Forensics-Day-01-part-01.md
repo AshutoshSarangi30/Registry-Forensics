@@ -47,7 +47,7 @@ We are now in USRCLASS.dat hive
 
 b. Now visit the ShellBags using:
 
-<div style="background: #f4f5f6; padding: 12px; border-radius: 4px; font-family: monospace; max-width: 500px; margin: 15px auto; border: 1px solid #e1e4e8; text-align: center; color: #333; font-size: 0.9em; overflow-x: auto;">Computer\HKEY_USERS\<SID>\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU&lt;SID&gt;</div>
+<div style="background: #f4f5f6; padding: 12px; border-radius: 4px; font-family: monospace; max-width: 500px; margin: 15px auto; border: 1px solid #e1e4e8; text-align: center; color: #333; font-size: 0.9em; overflow-x: auto;">Computer\HKEY_USERS\<SID>\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU</div>
                     
 
 <img src="https://github.com/user-attachments/assets/6fa82433-a78d-43fe-992e-9df42bf38506" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
