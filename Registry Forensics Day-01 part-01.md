@@ -36,7 +36,7 @@ a. Open Registry Editor and go to USRCLASS.dat hive using:
 
                                                          Computer\HKEY_USERS\<SID>
                                                          
-<img width="922" height="522" alt="image" src="https://github.com/user-attachments/assets/c22a8c06-21d7-4f91-b3d2-8a777488eedb" />
+<img width="922" height="522" alt="image" src="https://github.com/user-attachments/assets/bdb594d2-b6a2-4369-abff-c2e37bc843a2" />
 <br>
 <div align="center">
 We are now in USRCLASS.dat hive  
@@ -47,7 +47,8 @@ b. Now visit the ShellBags using:
 
                         Computer\HKEY_USERS\<SID>\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU
 
-<img width="956" height="537" alt="image" src="https://github.com/user-attachments/assets/2641b4c6-bebd-476e-a3b6-5120cb0e52bf" />
+<img width="956" height="537" alt="image" src="https://github.com/user-attachments/assets/6fa82433-a78d-43fe-992e-9df42bf38506" />
+
 <br>
 <div align="center">
 These are the ShellBags along with their (gibberish) hexadecimal data
@@ -59,7 +60,7 @@ c. We see a lot of files of ‘REG_BINARY' type with hexadecimal-coded data. Her
 
 d. Run a 'Load Active Registry' in ShellBags Explorer (note - run ShellBags Explorer as administrator). This will decode the ShellBags.
 
-<img width="1917" height="1022" alt="image" src="https://github.com/user-attachments/assets/cc9f1590-ffe0-4274-a47b-9babe21f3d51" />
+<img width="1917" height="1022" alt="image" src="https://github.com/user-attachments/assets/b2b60221-a424-4ac9-8f3c-3c10dccbc13f" />
 <br>
 <div align="center">
 Successfully decoded the “gibberish”
@@ -68,7 +69,7 @@ Successfully decoded the “gibberish”
 
 e. This is the same hexadecimal data which seemed gibberish to us moments ago. Now we see a structure familiar to our regular File Explorer. Here let us assume we need to find the current location of the marked file below. How do we do that?
 
-<img width="907" height="511" alt="image" src="https://github.com/user-attachments/assets/9c1a7c74-e88e-4e48-bb78-a0d6a919ef93"/>
+<img width="907" height="511" alt="image" src="https://github.com/user-attachments/assets/4809a16d-a774-4e37-9fce-9de965bca081" />
 <br>
 <div align="center">
 Let this be our target folder for this session
@@ -81,7 +82,7 @@ g. Run the following command in cmd (note - open the cmd in the folder where you
 
     JLECmd.exe -d “C:\Users\<YourUsername>\AppData\Roaming\Microsoft\Windows\Recent\AutomaticD estinations” --csv “C:\Users\<YourUsername>\Desktop”
 
-<img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/48e8f246-8f58-493a-8819-d1db9408cd15" />
+<img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/7fb23a65-a676-4524-a255-490cbb45c1d9" />
 <br>
 <div align="center">
 The CSV file of your system’s Jump Lists
@@ -90,7 +91,7 @@ The CSV file of your system’s Jump Lists
 
 h. Use the Filter feature and enter the keywords of the target file and we get the current location of that file.
 
-<img width="921" height="512" alt="image" src="https://github.com/user-attachments/assets/95ac8bc5-01fb-48fb-b414-fd28653d440f"/>
+<img width="921" height="512" alt="image" src="https://github.com/user-attachments/assets/e718d518-b33e-4b39-8bdb-67983bef5956" />
 <br>
 <div align="center">
 This is the output of the filter. We see multiple files having the same name as the filter we have applied. So now we can individually visit these files to get the desired one. For now let’s say we want to access the first file.
@@ -99,7 +100,7 @@ This is the output of the filter. We see multiple files having the same name as 
 
 i. Now we copy the file path and paste it in File Explorer and hey! The target file opens!
 
-<img width="1917" height="1016" alt="image" src="https://github.com/user-attachments/assets/5a68f9d0-3681-46ec-acc5-c6d08923d315" />
+<img width="1917" height="1016" alt="image" src="https://github.com/user-attachments/assets/daa83e17-011a-4481-b6b5-963856af9850" />
 <br>
 <div align="center">
 This is the file we were looking for. On the right we entered the file location in the search bar of the File Explorer and it opened the target file (on the left) for us.
