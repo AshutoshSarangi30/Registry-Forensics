@@ -37,7 +37,7 @@ a. Open Registry Editor and go to USRCLASS.dat hive using:
 
                                                                              `Computer\HKEY_USERS\<SID>`
                                                          
-<img src="[https://github.com/user-attachments/assets/b2b60221-a424-4ac9-8f3c-3c10dccbc13f](https://github.com/user-attachments/assets/bdb594d2-b6a2-4369-abff-c2e37bc843a2)" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
+<img src="https://github.com/user-attachments/assets/bdb594d2-b6a2-4369-abff-c2e37bc843a2" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <br>
 <div align="center">
 We are now in USRCLASS.dat hive  
@@ -46,7 +46,7 @@ We are now in USRCLASS.dat hive
 
 b. Now visit the ShellBags using:
 
-                                                 `Computer\HKEY_USERS\<SID>\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU`
+                                          `Computer\HKEY_USERS\<SID>\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU`
 
 <img src="https://github.com/user-attachments/assets/6fa82433-a78d-43fe-992e-9df42bf38506" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <br>
