@@ -38,8 +38,7 @@ a. Open Registry Editor and go to USRCLASS.dat hive using:
 
 <div align="center">
 <b>Computer\HKEY_USERS\{SID}</b>
-</div>
-<br>                                                       
+</div>                                                      
 <img src="https://github.com/user-attachments/assets/7a064595-d3c2-4d9d-9f96-9552fc77459c" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <br>
 <div align="center">
@@ -85,7 +84,10 @@ f. Enter JLECmd.exe. As discussed before Jump Lists will have it noted down if y
 
 g. Run the following command in cmd (note - open the cmd in the folder where you have the JLECmd.exe) and it will export the full record of the Jump Lists recorded in your system. Note that your decoded ShellBags show the folders you explored and Jump Lists go inside those folders and tell you which files were accessed.
 
-                JLECmd.exe -d “C:\Users\<YourUsername>\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations” --csv “C:\Users\<YourUsername>\Desktop”
+<div align="center">
+<b>JLECmd.exe -d “C:\Users\{YourUsername}\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations” --csv “C:\Users\{YourUsername}\Desktop”</b>
+</div>
+                
                 
 <img src="https://github.com/user-attachments/assets/7fb23a65-a676-4524-a255-490cbb45c1d9" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <br>
@@ -116,7 +118,9 @@ This is the file we were looking for. On the right we entered the file location 
 
 6. **Easter Eggs**: a. You can get your Security ID (SID) by running the following command on cmd:
 
-                          whoami /user                                          
+<div align="center">
+<b>whoami /user</b>
+</div>                                                                  
 
 b. Look at the circle in 3(e). We see a tick mark in the box. This is the ‘Has Explored’ section and it implies that the user visited that file/folder and EXPLICITLY made changes to it. Very crucial information as far as forensics is concerned.
 
