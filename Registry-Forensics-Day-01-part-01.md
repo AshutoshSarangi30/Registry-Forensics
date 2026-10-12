@@ -61,7 +61,7 @@ c. We see a lot of files of ‘REG_BINARY' type with hexadecimal-coded data. Her
 
 d. Run a 'Load Active Registry' in ShellBags Explorer (note - run ShellBags Explorer as administrator). This will decode the ShellBags.
 
-<img width="1917" height="1022" alt="image" src="https://github.com/user-attachments/assets/b2b60221-a424-4ac9-8f3c-3c10dccbc13f" />
+<img width="1917" alt="image" src="https://github.com/user-attachments/assets/b2b60221-a424-4ac9-8f3c-3c10dccbc13f" />
 <br>
 <div align="center">
 Successfully decoded the “gibberish”
