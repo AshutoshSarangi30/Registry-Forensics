@@ -35,10 +35,10 @@ c. **LNK Files** - This covers up the loophole left by Jump Lists. Every time a 
 
 a. Open Registry Editor and go to USRCLASS.dat hive using:
                                                                    
-
-<div align="center">
-<b>Computer\HKEY_USERS\{SID}</b>
-</div>                                                      
+```dos
+Computer\HKEY_USERS\{SID}
+```   
+                                                    
 <img src="https://github.com/user-attachments/assets/7a064595-d3c2-4d9d-9f96-9552fc77459c" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <br>
 <div align="center">
@@ -118,9 +118,9 @@ This is the file we were looking for. On the right we entered the file location 
 
 6. **Easter Eggs**: a. You can get your Security ID (SID) by running the following command on cmd:
 
-<div align="center">
-<b>whoami /user</b>
-</div>                                                                  
+```dos
+whoami /user
+```                                                               
 
 b. Look at the circle in 3(e). We see a tick mark in the box. This is the ‘Has Explored’ section and it implies that the user visited that file/folder and EXPLICITLY made changes to it. Very crucial information as far as forensics is concerned.
 
