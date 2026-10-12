@@ -26,7 +26,7 @@ Also, before proceeding with the activity, we must understand how deletion works
 
 4. **Activity**: a. We will try to retrieve a file named "Types of writing.docx" (which is permanently deleted from my system). So first let us check our Jump List.
 
-<img width="852" height="452" alt="image" src="https://github.com/user-attachments/assets/6de898bb-2471-4636-a2f1-a3ae63aca618" />
+<img width="852" height="452" alt="image" src="https://github.com/user-attachments/assets/eefbd773-7d7c-4553-95cc-c55115fdc69e" />
 <br>
 <div align="center">
 Found the record for the target file in the Jump List 
@@ -41,7 +41,7 @@ b. The Jump Lists gives us a location. Now let us check the LNK files using LECm
 
 Now we'll look for our target file. It is not amongst the LNK files.
 
-<img width="1912" height="1020" alt="image" src="https://github.com/user-attachments/assets/80b4cbfb-f24e-49dd-9aab-7a2160fd0044" />
+<img width="1912" height="1020" alt="image" src="https://github.com/user-attachments/assets/b7d0ebaf-c982-4c27-aa90-8697d11196b3" />
 <br>
 <div align="center">
 No records for the target file after LNK analysis
@@ -50,11 +50,11 @@ No records for the target file after LNK analysis
 
 c. Now visiting this location will not help our case as the file is already deleted. Enter **FTK Imager**. We first click on 'File' and go to 'Add Evidence Item'. After that you will be asked to choose which drive you want to scan. In our case we will go with C drive.
 
-<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/3ffa30a7-fa58-4054-bf4a-358b0785b80e" />
+<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/3a88607f-9aac-40bb-a8e3-376a9ce22f7a" />
 <br>
-<img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/375d8a9d-b871-4b30-9b25-d0257a256b0f" />
+<img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/eba5e23b-d1b1-4d4f-acb6-44a7183663b5" />
 <br>
-<img width="1917" height="1016" alt="image" src="https://github.com/user-attachments/assets/27e43a06-e892-4bdd-a541-803b854e3128" />
+<img width="1917" height="1016" alt="image" src="https://github.com/user-attachments/assets/8b7944ca-bbc8-4c11-96e9-4dcbdc6106d7" />
 <br>
 <div align="center">
 Working on FTK Imager
@@ -63,7 +63,7 @@ Working on FTK Imager
 
 d. Our next step is to locate the target file. So we navigate through the evidence tree and find the file manually (tedious but no other option unfortunately). On finding the file right-click on it and export it to your desktop.
 
-<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/8ab46290-2704-4407-abd5-d9f410a2db3a" />
+<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/dcd27fe7-60d2-4ebf-8114-90c0f2082a7f" />
 <br>
 <div align="center">
 Found the target file after FTK Imager scans the system’s disks
@@ -72,7 +72,7 @@ Found the target file after FTK Imager scans the system’s disks
 
 e. Now when we try to open we get a blank document. Note how the document has 12 pages. This is the number of pages the deleted document had. This is a sign that we may still be able to recover the data. Here Autopsy steps in.
 
-<img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/4fa89198-9c74-460c-80ae-e1443a25dccf" />
+<img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/426c7206-ae85-4279-9a65-1d8b2cb18a3c" />
 <br>
 <div align="center">
 The blank document after we extracted it from FTK Imager
@@ -81,11 +81,11 @@ The blank document after we extracted it from FTK Imager
 
 f. Open Autopsy and click on 'New Case'. Then go to 'Add Data Source' and enter the case name, set up the data source and click 'Finish'. The tool starts scanning the drive which you selected.
 
-<img width="1702" height="905" alt="image" src="https://github.com/user-attachments/assets/3bb1df8c-f9e7-490b-a816-3dd6ad1424a4" />
+<img width="1702" height="905" alt="image" src="https://github.com/user-attachments/assets/29d732d1-99fd-4761-9c3b-579a761a4b0d" />
 <br>
-<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/5d83a575-b9f8-4e8a-9db9-b742dfa0c496" />
+<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/2d305f3a-2806-4d7a-b207-43b231ddae45" />
 <br>
-<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/75a8e6f8-eb01-454b-8b86-88c560f00c6f" />
+<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/a5fd199b-900f-4ce1-b995-594ef6eebafa" />
 <br>
 <div align="center">
 Setting up Autopsy
@@ -94,7 +94,7 @@ Setting up Autopsy
 
 g. Go to ‘Deleted Files’, then ‘All’ and manually find the target file.
 
-<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/b2805941-f7d4-4d9f-9ac5-6608a9cacb99"/>
+<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/8bd4d848-17d2-4246-8ec1-590271d6af12" />
 <br>
 <div align="center">
 Found the target file in Autopsy
@@ -104,10 +104,10 @@ Found the target file in Autopsy
 h. After opening the recovered file we see this error. Now go to ‘File’ and open the target file as follows:
 <br>
 <br>
-<img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/bc804fd3-642d-4eea-b125-6f1130fcc54c" />
+<img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/c55fb1b2-99de-4e73-91ec-b33ce168a893" />
 <br>
 <br>
-<img width="972" height="517" alt="image" src="https://github.com/user-attachments/assets/89cf7149-7c2d-4721-890f-5bb74a349c39" />
+<img width="972" height="517" alt="image" src="https://github.com/user-attachments/assets/15e7ab72-0f3a-48f1-87a2-5bdc911cd143" />
 <br>
 <div align="center">
 Attempting to recover the data of the target file
@@ -116,7 +116,7 @@ Attempting to recover the data of the target file
 
 i. This is a dead end. Our investigation ends here and the data could not be recovered.
 
-<img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/9cb2de60-1d2c-4d9a-9c66-f4a3f6d2f238" />
+<img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/6091d1e5-7fc6-4408-b56b-6087476ee9cc" />
 <br>
 <div align="center">
 The “data” we recovered is nothing but gibberish which means the original data has been overwritten and cannot be retrieved
