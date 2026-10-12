@@ -36,7 +36,7 @@ c. **LNK Files** - This covers up the loophole left by Jump Lists. Every time a 
 a. Open Registry Editor and go to USRCLASS.dat hive using:
                                                                    
 
-<div style="background: #f4f5f6; padding: 12px; border-radius: 4px; font-family: monospace; margin: 10px 0; border-left: 4px solid #159957; text-align: center; color: #333; font-size: 0.9em; overflow-x: auto;">Computer\HKEY_USERS\&lt;SID&gt;</div>
+<div style="background: #f4f5f6; padding: 12px; border-radius: 4px; font-family: monospace; max-width: 500px; margin: 15px auto; border: 1px solid #e1e4e8; text-align: center; color: #333; font-size: 0.9em; overflow-x: auto;">Computer\HKEY_USERS\&lt;SID&gt;</div>
                                                          
 <img src="https://github.com/user-attachments/assets/7a064595-d3c2-4d9d-9f96-9552fc77459c" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <br>
