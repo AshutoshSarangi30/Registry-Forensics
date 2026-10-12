@@ -37,7 +37,7 @@ a. Open Registry Editor and go to USRCLASS.dat hive using:
 
                                                                     `Computer\HKEY_USERS\<SID>`
                                                          
-<img src="https://github.com/user-attachments/assets/bdb594d2-b6a2-4369-abff-c2e37bc843a2" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
+<img src="https://github.com/user-attachments/assets/7a064595-d3c2-4d9d-9f96-9552fc77459c" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <br>
 <div align="center">
 We are now in USRCLASS.dat hive  
