@@ -47,7 +47,8 @@ We are now in USRCLASS.dat hive
 
 b. Now visit the ShellBags using:
 
-                        `Computer\HKEY_USERS\<SID>\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU`
+<div style="background: #f4f5f6; padding: 12px; border-radius: 4px; font-family: monospace; max-width: 500px; margin: 15px auto; border: 1px solid #e1e4e8; text-align: center; color: #333; font-size: 0.9em; overflow-x: auto;">Computer\HKEY_USERS\<SID>\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU&lt;SID&gt;</div>
+                    
 
 <img src="https://github.com/user-attachments/assets/6fa82433-a78d-43fe-992e-9df42bf38506" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <br>
@@ -81,7 +82,8 @@ f. Enter JLECmd.exe. As discussed before Jump Lists will have it noted down if y
 
 g. Run the following command in cmd (note - open the cmd in the folder where you have the JLECmd.exe) and it will export the full record of the Jump Lists recorded in your system. Note that your decoded ShellBags show the folders you explored and Jump Lists go inside those folders and tell you which files were accessed.
 
-    `JLECmd.exe -d “C:\Users\<YourUsername>\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations” --csv “C:\Users\<YourUsername>\Desktop”`
+<div style="background: #f4f5f6; padding: 12px; border-radius: 4px; font-family: monospace; max-width: 500px; margin: 15px auto; border: 1px solid #e1e4e8; text-align: center; color: #333; font-size: 0.9em; overflow-x: auto;">JLECmd.exe -d “C:\Users\<YourUsername>\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations” --csv “C:\Users\<YourUsername>\Desktop”&lt;SID&gt;</div>
+
 
 <img src="https://github.com/user-attachments/assets/7fb23a65-a676-4524-a255-490cbb45c1d9" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <br>
@@ -112,7 +114,7 @@ This is the file we were looking for. On the right we entered the file location 
 
 6. **Easter Eggs**: a. You can get your Security ID (SID) by running the following command on cmd:
 
-                                                      `whoami /user`
+ <div style="background: #f4f5f6; padding: 12px; border-radius: 4px; font-family: monospace; max-width: 500px; margin: 15px auto; border: 1px solid #e1e4e8; text-align: center; color: #333; font-size: 0.9em; overflow-x: auto;">whoami /user&lt;SID&gt;</div>                                                   
 
 b. Look at the circle in 3(e). We see a tick mark in the box. This is the ‘Has Explored’ section and it implies that the user visited that file/folder and EXPLICITLY made changes to it. Very crucial information as far as forensics is concerned.
 
