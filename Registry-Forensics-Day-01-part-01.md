@@ -35,7 +35,7 @@ c. **LNK Files** - This covers up the loophole left by Jump Lists. Every time a 
 
 a. Open Registry Editor and go to USRCLASS.dat hive using:
 
-                                                         `Computer\HKEY_USERS\<SID>`
+                                                                             `Computer\HKEY_USERS\<SID>`
                                                          
 <img src="[https://github.com/user-attachments/assets/b2b60221-a424-4ac9-8f3c-3c10dccbc13f](https://github.com/user-attachments/assets/bdb594d2-b6a2-4369-abff-c2e37bc843a2)" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <br>
@@ -45,14 +45,10 @@ We are now in USRCLASS.dat hive
 <br>
 
 b. Now visit the ShellBags using:
-<div align="center">
- `Computer\HKEY_USERS\<SID>\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU`
-</div>
 
-                                         `Computer\HKEY_USERS\<SID>\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU`
+                                                 `Computer\HKEY_USERS\<SID>\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU`
 
 <img src="https://github.com/user-attachments/assets/6fa82433-a78d-43fe-992e-9df42bf38506" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
-
 <br>
 <div align="center">
 These are the ShellBags along with their (gibberish) hexadecimal data
@@ -65,7 +61,6 @@ c. We see a lot of files of ‘REG_BINARY' type with hexadecimal-coded data. Her
 d. Run a 'Load Active Registry' in ShellBags Explorer (note - run ShellBags Explorer as administrator). This will decode the ShellBags.
 
 <img src="https://github.com/user-attachments/assets/b2b60221-a424-4ac9-8f3c-3c10dccbc13f" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
-
 <br>
 <div align="center">
 Successfully decoded the “gibberish”
