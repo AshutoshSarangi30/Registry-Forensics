@@ -24,16 +24,16 @@ In today's session we have focused on USRCLASS.DAT. USRCLASS.DAT (along with NTU
 
 We have used two primary features of Windows OS today - ShellBags and Jump Lists.
 
-a. **ShellBags** - Think of it as the "visual search history" of your system. For instance if you go to your Downloads folder and set 'View Icons' as 'Large', then that is saved in the ShellBag. It exists inside the USRCLASS.dat.
+  a. **ShellBags** - Think of it as the "visual search history" of your system. For instance if you go to your Downloads folder and set 'View Icons' as 'Large', then that is saved in the ShellBag. It exists inside the USRCLASS.dat.
 
-b. **Jump Lists** - These are sitting in your hard drive. They have information on EVERY FILE which you view, access or execute on your system. However, there is a catch here. If you do not do any of the aforementioned activities then Jump List doesn't store that. Every application has its own Jump List provided it has the provision for storing history.
+  b. **Jump Lists** - These are sitting in your hard drive. They have information on EVERY FILE which you view, access or execute on your system. However, there is a catch here. If you do not do any of the aforementioned activities then Jump List doesn't store that. Every application has its own Jump List provided it has the provision for storing history.
 
-c. **LNK Files** - This covers up the loophole left by Jump Lists. Every time a file lands in your system, a "breadcrumb" is left and stored as an LNK file. This is crucial in situations where you have to recover data which is permanently deleted.
+  c. **LNK Files** - This covers up the loophole left by Jump Lists. Every time a file lands in your system, a "breadcrumb" is left and stored as an LNK file. This is crucial in situations where you have to recover data which is permanently deleted.
 
 
 4. **Activity**: Now our target today is to locate a file which was stored in C drive long ago but its current location is not known.
 
-a. Open Registry Editor and go to USRCLASS.dat hive using:
+  a. Open Registry Editor and go to USRCLASS.dat hive using:
                                                                    
 ```dos
 Computer\HKEY_USERS\{SID}
@@ -46,7 +46,7 @@ We are now in USRCLASS.dat hive
 </div>
 <br>
 
-b. Now visit the ShellBags using:
+  b. Now visit the ShellBags using:
 
 ```dos
 Computer\HKEY_USERS\{SID}\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU
@@ -59,10 +59,10 @@ These are the ShellBags along with their (gibberish) hexadecimal data
 </div>
 <br>
 
-c. We see a lot of files of ‘REG_BINARY' type with hexadecimal-coded data. Here our first tool comes into use i.e. **ShellBags Explorer** which decodes this hexadecimal data into a format which we can understand.
+  c. We see a lot of files of ‘REG_BINARY' type with hexadecimal-coded data. Here our first tool comes into use i.e. **ShellBags Explorer** which decodes this hexadecimal data into a format which we can understand.
 
 
-d. Run a 'Load Active Registry' in ShellBags Explorer (note - run ShellBags Explorer as administrator). This will decode the ShellBags.
+  d. Run a 'Load Active Registry' in ShellBags Explorer (note - run ShellBags Explorer as administrator). This will decode the ShellBags.
 
 <img src="https://github.com/user-attachments/assets/b2b60221-a424-4ac9-8f3c-3c10dccbc13f" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <br>
@@ -71,7 +71,7 @@ Successfully decoded the “gibberish”
 </div>
 <br>
 
-e. This is the same hexadecimal data which seemed gibberish to us moments ago. Now we see a structure familiar to our regular File Explorer. Here let us assume we need to find the current location of the marked file below. How do we do that?
+  e. This is the same hexadecimal data which seemed gibberish to us moments ago. Now we see a structure familiar to our regular File Explorer. Here let us assume we need to find the current location of the marked file below. How do we do that?
 
 <img src="https://github.com/user-attachments/assets/4809a16d-a774-4e37-9fce-9de965bca081" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <br>
@@ -79,10 +79,10 @@ e. This is the same hexadecimal data which seemed gibberish to us moments ago. N
 Let this be our target folder for this session
 </div>
 <br>
-f. Enter JLECmd.exe. As discussed before Jump Lists will have it noted down if you view, access or execute a file. We use this to find the current location of our chosen file.
+  f. Enter JLECmd.exe. As discussed before Jump Lists will have it noted down if you view, access or execute a file. We use this to find the current location of our chosen file.
 
 
-g. Run the following command in cmd (note - open the cmd in the folder where you have the JLECmd.exe) and it will export the full record of the Jump Lists recorded in your system. Note that your decoded ShellBags show the folders you explored and Jump Lists go inside those folders and tell you which files were accessed.
+  g. Run the following command in cmd (note - open the cmd in the folder where you have the JLECmd.exe) and it will export the full record of the Jump Lists recorded in your system. Note that your decoded ShellBags show the folders you explored and Jump Lists go inside those folders and tell you which files were accessed.
 
 ```dos
 JLECmd.exe -d "C:\Users\<YourUsername>\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations" --csv "C:\Users\<YourUsername>\Desktop"
@@ -96,7 +96,7 @@ The CSV file of your system’s Jump Lists
 </div>
 <br>
 
-h. Use the Filter feature and enter the keywords of the target file and we get the current location of that file.
+  h. Use the Filter feature and enter the keywords of the target file and we get the current location of that file.
 
 <img src="https://github.com/user-attachments/assets/e718d518-b33e-4b39-8bdb-67983bef5956" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <br>
@@ -105,7 +105,7 @@ This is the output of the filter. We see multiple files having the same name as 
 </div>
 <br>
 
-i. Now we copy the file path and paste it in File Explorer and hey! The target file opens!
+  i. Now we copy the file path and paste it in File Explorer and hey! The target file opens!
 
 <img src="https://github.com/user-attachments/assets/daa83e17-011a-4481-b6b5-963856af9850" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <br>
