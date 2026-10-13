@@ -4,3 +4,4 @@
 
 1. [USRCLASS.dat (part 1)](Registry-Forensics-Day-01-part-01.html)
 2. [USRCLASS.dat (part 2)](Registry-Forensics-Day-01-part-02.html)
+3. [NTUSER.dat](Registry-Forensics-Day-02.html)
