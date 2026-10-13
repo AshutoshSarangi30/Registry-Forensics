@@ -42,6 +42,7 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist
 These are the folders where all our recently run programs are stored. Here, note that all the folders except CEBFF… and F4E57… have programs which are not recognisable to us. Actually all these folders are encrypted using the ROT13 cipher. It is Registry Explorer which decrypts them. Yet we are able to see only the two aforementioned folders since they are the only ones tracking applications we use everyday.
 </div>
 <img src="https://github.com/user-attachments/assets/db8afe2a-ccdf-4acf-b3f2-d91aaf53fe8f" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
+<br>
 <img src="https://github.com/user-attachments/assets/1a015547-dc1c-42fa-aac2-300c86d92d11" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <div align="center">
 These are the recently accessed programs by the user.
