@@ -27,26 +27,20 @@ Also, before proceeding with the activity, we must understand how deletion works
 4\. **Activity**: a. We will try to retrieve a file named "Types of writing.docx" (which is permanently deleted from my system). So first let us check our Jump List.
 
 <img src="https://github.com/user-attachments/assets/eefbd773-7d7c-4553-95cc-c55115fdc69e" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
-<br>
 <div align="center">
 Found the record for the target file in the Jump List 
 </div>
-<br>
-b. The Jump Lists gives us a location. Now let us check the LNK files using LECmd.exe to see if we can get anything there. Run the following command to perform LNK analysis:      <br>
-<br>
+
+b. The Jump Lists gives us a location. Now let us check the LNK files using LECmd.exe to see if we can get anything there. Run the following command to perform LNK analysis:      
 
      LECmd.exe -d "C:\Users\<YourUsername>\AppData\Roaming\Microsoft\Windows\Recent" --csv "C:\Users\<YourUsername>\Desktop" --csvf "LNK_Analysis.csv"
-
-<br>
 
 Now we'll look for our target file. It is not amongst the LNK files.
 
 <img src="https://github.com/user-attachments/assets/b7d0ebaf-c982-4c27-aa90-8697d11196b3" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
-<br>
 <div align="center">
 No records for the target file after LNK analysis
 </div>
-<br>
 
 c. Now visiting this location will not help our case as the file is already deleted. Enter **FTK Imager**. We first click on 'File' and go to 'Add Evidence Item'. After that you will be asked to choose which drive you want to scan. In our case we will go with C drive.
 
@@ -54,31 +48,24 @@ c. Now visiting this location will not help our case as the file is already dele
 <br>
 <img src="https://github.com/user-attachments/assets/eba5e23b-d1b1-4d4f-acb6-44a7183663b5" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <br>
-<img width="1917" height="1016" alt="image" src="" />
 <img src="https://github.com/user-attachments/assets/8b7944ca-bbc8-4c11-96e9-4dcbdc6106d7" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
-<br>
 <div align="center">
 Working on FTK Imager
 </div>
-<br>
 
 d. Our next step is to locate the target file. So we navigate through the evidence tree and find the file manually (tedious but no other option unfortunately). On finding the file right-click on it and export it to your desktop.
 
 <img src="https://github.com/user-attachments/assets/dcd27fe7-60d2-4ebf-8114-90c0f2082a7f" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
-<br>
 <div align="center">
 Found the target file after FTK Imager scans the system’s disks
 </div>
-<br>
 
 e. Now when we try to open we get a blank document. Note how the document has 12 pages. This is the number of pages the deleted document had. This is a sign that we may still be able to recover the data. Here Autopsy steps in.
 
 <img src="https://github.com/user-attachments/assets/426c7206-ae85-4279-9a65-1d8b2cb18a3c" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
-<br>
 <div align="center">
 The blank document after we extracted it from FTK Imager
 </div>
-<br>
 
 f. Open Autopsy and click on 'New Case'. Then go to 'Add Data Source' and enter the case name, set up the data source and click 'Finish'. The tool starts scanning the drive which you selected.
 
@@ -87,42 +74,31 @@ f. Open Autopsy and click on 'New Case'. Then go to 'Add Data Source' and enter 
 <img src="https://github.com/user-attachments/assets/2d305f3a-2806-4d7a-b207-43b231ddae45" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <br>
 <img src="https://github.com/user-attachments/assets/a5fd199b-900f-4ce1-b995-594ef6eebafa" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
-<br>
 <div align="center">
 Setting up Autopsy
 </div>
-<br>
 
 g. Go to ‘Deleted Files’, then ‘All’ and manually find the target file.
 
 <img src="https://github.com/user-attachments/assets/8bd4d848-17d2-4246-8ec1-590271d6af12" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
-<br>
 <div align="center">
 Found the target file in Autopsy
 </div>
-<br>
 
 h. After opening the recovered file we see this error. Now go to ‘File’ and open the target file as follows:
-<br>
-<br>
 <img src="https://github.com/user-attachments/assets/c55fb1b2-99de-4e73-91ec-b33ce168a893" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <br>
-<br>
 <img src="https://github.com/user-attachments/assets/15e7ab72-0f3a-48f1-87a2-5bdc911cd143" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
-<br>
 <div align="center">
 Attempting to recover the data of the target file
 </div> 
-<br>
 
 i. This is a dead end. Our investigation ends here and the data could not be recovered.
 
 <img src="https://github.com/user-attachments/assets/6091d1e5-7fc6-4408-b56b-6087476ee9cc" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
-<br>
 <div align="center">
 The “data” we recovered is nothing but gibberish which means the original data has been overwritten and cannot be retrieved
 </div>
-<br>
 
 5\. **Conclusions**: a. We couldn’t find the data because the data clusters which Windows had allotted it have been overwritten. Our file’s data is permanently gone. However, if we can prove that a certain file actually existed in a person’s computer and that he or she had accessed it (using Jump Lists), that is a solid proof.
 
