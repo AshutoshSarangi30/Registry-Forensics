@@ -40,11 +40,9 @@ Computer\HKEY_USERS\{SID}
 ```   
                                                     
 <img src="https://github.com/user-attachments/assets/7a064595-d3c2-4d9d-9f96-9552fc77459c" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
-<br>
 <div align="center">
 We are now in USRCLASS.dat hive  
 </div>
-<br>
 
   b. Now visit the ShellBags using:
 
@@ -53,11 +51,9 @@ Computer\HKEY_USERS\{SID}\Software\Classes\Local Settings\Software\Microsoft\Win
 ```                                    
 
 <img src="https://github.com/user-attachments/assets/6fa82433-a78d-43fe-992e-9df42bf38506" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
-<br>
 <div align="center">
 These are the ShellBags along with their (gibberish) hexadecimal data
 </div>
-<br>
 
   c. We see a lot of files of ‘REG_BINARY' type with hexadecimal-coded data. Here our first tool comes into use i.e. **ShellBags Explorer** which decodes this hexadecimal data into a format which we can understand.
 
@@ -65,20 +61,17 @@ These are the ShellBags along with their (gibberish) hexadecimal data
   d. Run a 'Load Active Registry' in ShellBags Explorer (note - run ShellBags Explorer as administrator). This will decode the ShellBags.
 
 <img src="https://github.com/user-attachments/assets/b2b60221-a424-4ac9-8f3c-3c10dccbc13f" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
-<br>
 <div align="center">
 Successfully decoded the “gibberish”
 </div>
-<br>
 
   e. This is the same hexadecimal data which seemed gibberish to us moments ago. Now we see a structure familiar to our regular File Explorer. Here let us assume we need to find the current location of the marked file below. How do we do that?
 
 <img src="https://github.com/user-attachments/assets/4809a16d-a774-4e37-9fce-9de965bca081" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
-<br>
 <div align="center">
 Let this be our target folder for this session
 </div>
-<br>
+
   f. Enter JLECmd.exe. As discussed before Jump Lists will have it noted down if you view, access or execute a file. We use this to find the current location of our chosen file.
 
 
@@ -90,29 +83,23 @@ JLECmd.exe -d "C:\Users\<YourUsername>\AppData\Roaming\Microsoft\Windows\Recent\
                 
                 
 <img src="https://github.com/user-attachments/assets/7fb23a65-a676-4524-a255-490cbb45c1d9" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
-<br>
 <div align="center">
 The CSV file of your system’s Jump Lists
 </div>
-<br>
 
   h. Use the Filter feature and enter the keywords of the target file and we get the current location of that file.
 
 <img src="https://github.com/user-attachments/assets/e718d518-b33e-4b39-8bdb-67983bef5956" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
-<br>
 <div align="center">
 This is the output of the filter. We see multiple files having the same name as the filter we have applied. So now we can individually visit these files to get the desired one. For now let’s say we want to access the first file.
 </div>
-<br>
 
   i. Now we copy the file path and paste it in File Explorer and hey! The target file opens!
 
 <img src="https://github.com/user-attachments/assets/daa83e17-011a-4481-b6b5-963856af9850" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
-<br>
 <div align="center">
 This is the file we were looking for. On the right we entered the file location in the search bar of the File Explorer and it opened the target file (on the left) for us.
 </div>
-<br>
 
 5\. **Conclusion**: In this session we found out how we go about finding a file which is "lost" somewhere in our system. But what if the file is deleted?
 
