@@ -11,9 +11,9 @@ When you explore this hive you will see there are numerous folders here and you 
 4. **Activity** - In this session we will look at some important folders in the SYSTEM hive and what their work is. So first let us get into the hive by visiting the following:
 
   ```dos
-HKEY_LOCAL_MACHINE\SYSTEM
+HKEY_LOCAL_MACHINE\SYSTEMF
    ```
-i. **ControlSet001** points to the active system configuration and the current session. Sounds complicated? Well a control set stores all the hardware drivers, services and other requirements to run the OS. Windows keeps two control sets - one as the main session and the other as a backup in case there is a mishap while opening the primary session.
+i. **CurrentControlSet** points to the active system configuration and the current session. Sounds complicated? Well a control set stores all the hardware drivers, services and other requirements to run the OS. Windows keeps two control sets - one as the main session and the other as a backup in case there is a mishap while opening the primary session.
 
 One of the first things we see here is **hivelist**. As the name suggests, it is a list of ALL the hives across ALL the keys (for context, the HKEY_LOCAL_MACHINE or the HKEY_USERS is a key) in your Windows Registry.
 <br>
@@ -36,7 +36,7 @@ We can see 'HypervisorLaunchType' and 'IgnoreMemPart'. Let us understand these.
 Moving on, we see another folder - **File Systems**. Now a file system is basically any method which an OS uses to manage, name and store its files. File systems also determine how data can be retrieved in a given OS. Windows uses NTFS file system so when we go into this folder we expect parameters related to NTFS.
 <img src="https://github.com/user-attachments/assets/fe91af84-5aeb-4e29-afe3-98bbba581a3a" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <div align="center">
-As expected, we see a series of REG_QWORD and REG_DWORD files
+As expected, we see a series of REG_QWORD and REG_DWORD values
 </div>
 The settings determine how the file system will behave thus affecting how the operating system manages the files we use everyday. For instance, note that the 'LongPathsEnabled' has been set to 0. 'LongPathsEnabled' is used to determine whether applications can access file paths longer than 260 characters. Setting it to 0 implies that the apps cannot access paths more than 260 characters. Also look at NtfsDisableLastAccessUpdate. Turning this on means Windows will not update the last accessed timestamps for your files. This prevents unnecessary write commands to the HDD or SSD.
 
@@ -88,14 +88,14 @@ Now we see whether the user had attached any external drives to this system. For
 <div align="center">
 List of all the storage drives connected to my system.
 </div>
-We see a full list of data which we presume to be USB drives. However that is not the case. See the \??\Volume{}? This is the identifier for a single USB drive. Just the way we identify USB drives with their names (the very famous CruzerBlade for SanDisks), same way Windows uses Volume GUIDs to identify them. These GUIDs are maintained for a USB as long as the drive is not formatted. For instance \\??\\Volume{8abcd} is the identifier given to my SanDisk pen drive by my laptop. So as long as my laptop's drive is not formatted this GUID is maintained by my Windows and even if I plug in the same USB after 10 years my OS will easily identify it. Now we can also find the manufacturer from the values provided here.
+We see a full list of data which we presume to be USB drives. However that is not the case. See the \??\Volume{}? This is the identifier for a single USB drive. Just the way we identify USB drives with their names (the very famous CruzerBlade for SanDisks), same way Windows uses Volume GUIDs to identify them. These GUIDs are maintained for a USB as long as the drive is not formatted. For instance \??\Volume{8abcd} is the identifier given to my SanDisk pen drive by my laptop. So as long as my laptop's drive is not formatted this GUID is maintained by my Windows and even if I plug in the same USB after 10 years my OS will easily identify it. Now we can also find the manufacturer from the values provided here.
 
 <img src="https://github.com/user-attachments/assets/6350f5bf-1d8f-468a-ab02-ff8db8234ece" style="max-width: 100%; height: auto !important; display: block;" alt="Registry Forensic ShellBags Screenshot" />
 <div align="center">
 Observe the red box. It says - 'USBSTOR#Ven_Generic_Prod_Flash_Disk'. This implies that the USB I plugged in is a random one and not from any known manufacturer (like SanDisk or HP).
 </div>
 
-5.**Conclusions**- This report may not have been as investigative as the previous ones but it is very important to understand how the system is managing the hardware in and around it. In fact, the MountedDevices folder will be a target for investigators who are trying to understand how a malware infected a given system.
+5. **Conclusions** - This report may not have been as investigative as the previous ones but it is very important to understand how the system is managing the hardware in and around it. In fact, the MountedDevices folder will be a target for investigators who are trying to understand how a malware infected a given system.
    
 6. **Easter Eggs** - One thing which should be kept in mind is that the MountedDevices folder keeps record of only storage devices. Any network dongle or drive of a wireless keyboard/mouse will not be recorded here. For that, we have to visit:
 
