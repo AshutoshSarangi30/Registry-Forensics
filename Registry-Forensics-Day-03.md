@@ -95,9 +95,9 @@ We see a full list of data which we presume to be USB drives. However that is no
 Observe the red box. It says - 'USBSTOR#Ven_Generic_Prod_Flash_Disk'. This implies that the USB I plugged in is a random one and not from any known manufacturer (like SanDisk or HP).
 </div>
 
-5. **Conclusions** - This report may not have been as investigative as the previous ones but it is very important to understand how the system is managing the hardware in and around it. In fact, the MountedDevices folder will be a target for investigators who are trying to understand how a malware infected a given system.
+5\. **Conclusions** - This report may not have been as investigative as the previous ones but it is very important to understand how the system is managing the hardware in and around it. In fact, the MountedDevices folder will be a target for investigators who are trying to understand how a malware infected a given system.
    
-6. **Easter Eggs** - One thing which should be kept in mind is that the MountedDevices folder keeps record of only storage devices. Any network dongle or drive of a wireless keyboard/mouse will not be recorded here. For that, we have to visit:
+6\. **Easter Eggs** - One thing which should be kept in mind is that the MountedDevices folder keeps record of only storage devices. Any network dongle or drive of a wireless keyboard/mouse will not be recorded here. For that, we have to visit:
 
 ```dos
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USB
@@ -116,7 +116,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USBSTOR
 This is some further information on my Generic Flash Disk. Note two entries under the same firmware version (Rev 8.07). This means that I had attached two USBs of the same controller model to the system, which is true since I do have two generic pen drives of the exact same type. Further note the 'Linux File-Stor Gadget' entry, which implies that either a Raspberry PI or an Android phone was connected to the system. Again this record can also be verified by me as I had connected my phone to the system using a USB cable a few days ago. 
 </div>
 
-7. **Next session** - Exploring HKEY_LOCAL_MACHINE further.
+7\. **Next Session** - Exploring HKEY_LOCAL_MACHINE further.
    
 
 
